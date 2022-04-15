@@ -1,11 +1,20 @@
-import type { GatsbyConfig } from "gatsby"
+import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `simple-gatsby`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://www.yourdomain.tld`
   },
-  plugins: [],
-}
+  plugins: [
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /images/
+        }
+      }
+    }
+  ]
+};
 
-export default config
+export default config;
